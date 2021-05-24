@@ -1,1 +1,1 @@
-# Discrete Mathematics Basic Counting
+# My collection for utility functions
