@@ -4,6 +4,7 @@ import {
   validateCapitalLetters,
   validateNumbers,
   validateMinMaxLength,
+  validateSpecialChars,
 } from "./password-validation.js";
 const allCapitals = "ASC";
 const allLowers = "asc";
@@ -11,6 +12,8 @@ const allNumbers = "123";
 const noNumbers = "abc";
 const withinRange = { password: "password", min: 8, max: 16 };
 const withinNotRange = { password: "pas", min: 8, max: 16 };
+const hasSpecialChars = "user@123";
+const hasNoSpecialChars = "user";
 
 // validateLowercaseLetters
 let result = validateLowercaseLetters(allLowers);
@@ -38,4 +41,11 @@ result = validateMinMaxLength(withinRange);
 console.log(result === true);
 
 result = validateMinMaxLength(withinNotRange);
+console.log(result === false);
+
+// validateSpecialChars
+result = validateSpecialChars(hasSpecialChars);
+console.log(result === true);
+
+result = validateSpecialChars(hasNoSpecialChars);
 console.log(result === false);

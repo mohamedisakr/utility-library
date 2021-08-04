@@ -1,7 +1,7 @@
 // https://www.w3schools.com/howto/howto_js_password_validation.asp
 
 const validateLowercaseLetters = (password) => {
-  var lowerCaseLetters = /[a-z]/g;
+  const lowerCaseLetters = /[a-z]/g;
   if (password.match(lowerCaseLetters)) {
     return true;
   }
@@ -9,7 +9,7 @@ const validateLowercaseLetters = (password) => {
 };
 
 const validateCapitalLetters = (password) => {
-  var upperCaseLetters = /[A-Z]/g;
+  const upperCaseLetters = /[A-Z]/g;
   if (password.match(upperCaseLetters)) {
     return true;
   }
@@ -17,7 +17,7 @@ const validateCapitalLetters = (password) => {
 };
 
 const validateNumbers = (password) => {
-  var numbers = /[0-9]/g;
+  const numbers = /[0-9]/g;
   if (password.match(numbers)) {
     return true;
   }
@@ -31,9 +31,20 @@ const validateMinMaxLength = ({ password, min, max }) => {
   return false;
 };
 
+const validateSpecialChars = (password) => {
+  // If you're using this for passwords, this one has all the special characters defined
+  // by OWASP: /[\s~`!@#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?()\._]/g.test(str)
+  const specialChars = /[\s~`!@#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?()\._]/g;
+  if (password.match(specialChars)) {
+    return true;
+  }
+  return false;
+};
+
 export {
   validateLowercaseLetters,
   validateCapitalLetters,
   validateNumbers,
   validateMinMaxLength,
+  validateSpecialChars,
 };
