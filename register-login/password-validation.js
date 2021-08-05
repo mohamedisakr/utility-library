@@ -41,10 +41,19 @@ const validateSpecialChars = (password) => {
   return false;
 };
 
+const validateWhiteSpaces = (password) => {
+  const regex = /^\S+$/gm;
+  if (password.match(regex)) {
+    return true;
+  }
+  return false;
+};
+
 export {
   validateLowercaseLetters,
   validateCapitalLetters,
   validateNumbers,
   validateMinMaxLength,
   validateSpecialChars,
+  validateWhiteSpaces,
 };
