@@ -6,7 +6,7 @@ import {
   validateMinMaxLength,
   validateSpecialChars,
   validateWhiteSpaces,
-} from "./password-validation.js";
+} from "../password-validation.js";
 const allCapitals = "ASC";
 const allLowers = "asc";
 const allNumbers = "123";

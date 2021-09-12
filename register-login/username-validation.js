@@ -14,18 +14,3 @@ const isValidUsername = (username) => {
   }
   return false;
 };
-
-const testCases = [
-  { username: "Guiseppe_Reichert", expected: true },
-  { username: "Randi_Volkman47", expected: true },
-  { username: "Aurelio90", expected: true },
-  { username: "Tiffany.White", expected: true },
-  { username: "Shana.Rutherford5", expected: true },
-  { username: "Johnnie.Cassin", expected: true },
-  { username: "Betsy.Brown63", expected: true },
-];
-
-testCases.forEach(({ username, expected }) => {
-  let actual = isValidUsername(username);
-  console.log(actual === expected);
-});
