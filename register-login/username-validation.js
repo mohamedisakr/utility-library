@@ -14,3 +14,5 @@ const isValidUsername = (username) => {
   }
   return false;
 };
+
+module.exports = isValidUsername;

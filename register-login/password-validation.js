@@ -49,7 +49,7 @@ const validateWhiteSpaces = (password) => {
   return false;
 };
 
-export {
+module.exports = {
   validateLowercaseLetters,
   validateCapitalLetters,
   validateNumbers,
