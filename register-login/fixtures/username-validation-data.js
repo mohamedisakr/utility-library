@@ -1,4 +1,4 @@
-const testCases = [
+const positiveTestCases = [
   // username, expected
   ["Guiseppe_Reichert", true],
   ["Randi_Volkman47", true],
@@ -9,9 +9,11 @@ const testCases = [
   ["Betsy.Brown63", true],
 ];
 
-//   testCases.forEach(({ username, expected }) => {
-//     let actual = isValidUsername(username);
-//     console.log(actual === expected);
-//   });
+const edgeTestCases = [
+  // description, username, expected
+  ["should fail for white space", "Guiseppe Reichert", false],
+  ["should fail for special characters", "$@&Reichert", false],
+  ["should fail for leading & trailing white spaces", " eichert ", false],
+];
 
-module.exports = testCases;
+module.exports = { positiveTestCases, edgeTestCases };
