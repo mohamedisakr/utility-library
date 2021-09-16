@@ -42,7 +42,7 @@ const validateSpecialChars = (password) => {
 };
 
 const validateWhiteSpaces = (password) => {
-  const regex = /^\S+$/gm;
+  const regex = /\s/gm; // /^\S+$/gm;
   if (password.match(regex)) {
     return true;
   }
